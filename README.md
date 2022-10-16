@@ -75,3 +75,7 @@ django-admin startproject NAME_PROJECT [directory]
 ```bash
 	python manage.py runserver
 ```
+
+## Make Migrations
+
+I've done a little bit of code for home page GET, but now need to do some migrations
