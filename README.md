@@ -69,3 +69,9 @@ django-admin startproject NAME_PROJECT [directory]
 ```bash
 	django-admin startproject drinks .
 ```
+
+## run server
+
+```bash
+	python manage.py runserver
+```
