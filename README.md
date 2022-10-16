@@ -101,3 +101,26 @@ add the app we created "drinks" and "rest_framework" to the installed apps
 		...
 	]
 ```
+
+# Connect from app to the DB in AWS
+
+## Using the tool Boto3
+
+```bash
+	pip3 install boto3
+```
+
+## Create simple table in DynamoDB in AWS
+
+go to AWS and search for "DynamoDB" and click on "create table"
+Table Name: drinks
+Partition Key: name (string)
+table config: custom (so avoid any charges in my credit card haha)
+(AWS does not charge for read and write, it charges for the speed this uses)
+limit Read to 5 units
+limit Wite to 5 or 1 unit
+create table
+go to create new element
+example:
+name: grape soda (string)
+description: very grapey (string)
