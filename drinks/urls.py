@@ -20,5 +20,5 @@ from drinks import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home),
-    path("<str:name>", views.drink_detail),
+    path('<str:name>', views.drink_detail),
 ]

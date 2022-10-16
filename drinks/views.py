@@ -23,5 +23,15 @@ def home(request):
 
 @api_view(["GET", "PUT", "DELETE"])
 def drink_detail(request, name):
+    db = boto3.resource("dynamodb")
+    table = db.Table("drinks")
+
     if request.method == "GET":
-        return Response({"test": "a test"})
+        drink = table.get_item(Key={
+            "name": name
+        })
+
+        if (drink.get("Item") is not None):
+            return Response({"drink": drink.get("Item")})
+        else:
+            return Response(status=status.HTTP_404_NOT_FOUND)
