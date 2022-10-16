@@ -42,3 +42,9 @@ def drink_detail(request, name):
             return Response(status=status.HTTP_200_OK)
         except:
             return Response({"error": "failed to update"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+    elif request.method == "DELETE":
+        drink = table.delete_item(Key = {
+            "name": name
+        })
+        return Response(status=status.HTTP_200_OK)
