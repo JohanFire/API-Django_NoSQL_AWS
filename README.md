@@ -88,3 +88,16 @@ how? like this:
 ```bash
 	python manage.py makemigrations
 ```
+
+## Need to add things to settings.py
+
+add the app we created "drinks" and "rest_framework" to the installed apps
+
+```python
+	INSTALLED_APPS = [
+		...
+		'drinks',
+		'rest_framework',
+		...
+	]
+```
