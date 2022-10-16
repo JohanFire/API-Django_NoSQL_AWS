@@ -79,3 +79,12 @@ django-admin startproject NAME_PROJECT [directory]
 ## Make Migrations
 
 I've done a little bit of code for home page GET, but now need to do some migrations
+how? like this:
+
+```bash
+	python manage.py migrate
+```
+
+```bash
+	python manage.py makemigrations
+```
