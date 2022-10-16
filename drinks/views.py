@@ -35,3 +35,10 @@ def drink_detail(request, name):
             return Response({"drink": drink.get("Item")})
         else:
             return Response(status=status.HTTP_404_NOT_FOUND)
+    
+    elif request.method == "PUT":
+        try:
+            table.put_item(Item=request.data)
+            return Response(status=status.HTTP_200_OK)
+        except:
+            return Response({"error": "failed to update"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
