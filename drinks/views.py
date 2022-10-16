@@ -20,3 +20,8 @@ def home(request):
             return Response(status=status.HTTP_201_CREATED)
         except:
             return Response({"error": "failed to insert"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["GET", "PUT", "DELETE"])
+def drink_detail(request, name):
+    if request.method == "GET":
+        return Response({"test": "a test"})
